@@ -7,7 +7,7 @@ type Status = {
 const responseFromAcceptHeader = (accept: string, s: Status): Response => {
   const JSONContentType = 'application/json';
   if (accept.includes(JSONContentType)) {
-    return new Response(`{"status": "${s.status}"}`, { headers: { 'content-type': JSONContentType }});
+    return new Response(JSON.stringify(s), { headers: { 'content-type': JSONContentType }});
   }
   return new Response(`${s.status}\n`, { headers: { 'content-type': 'text/plain' }});
 }
