@@ -16,5 +16,4 @@ const handleRequest = (req: Request): Response => {
   return responseFromAcceptHeader(req.headers.get('Accept') || '', {status: 'Degraded'})
 }
 
-//const sw = self as ServiceWorkerGlobalScope & typeof globalThis
-self.addEventListener('fetch', async (event: FetchEvent) => { event.respondWith(handleRequest(event.request)) });
+addEventListener('fetch', async (event: FetchEvent) => { event.respondWith(handleRequest(event.request)) });
