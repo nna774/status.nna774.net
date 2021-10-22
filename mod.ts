@@ -13,7 +13,7 @@ const responseFromAcceptHeader = (accept: string, s: Status): Response => {
 }
 
 const handleRequest = (req: Request): Response => {
-  return responseFromAcceptHeader(req.headers.get('Accept') || '', {status: 'Degraded'})
+  return responseFromAcceptHeader(req.headers.get('Accept') || '', {status: 'Degraded'});
 }
 
 addEventListener('fetch', async (event: FetchEvent) => { event.respondWith(handleRequest(event.request)) });
