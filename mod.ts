@@ -13,7 +13,7 @@ const responseFromAcceptHeader = (accept: string, s: Status): Response => {
 };
 
 const favicon = (): Response => {
-  return new Response(null, {status: 302, headers: { location: 'https://nna774.net/favicon.ico' }});
+  return new Response(null, { status: 302, headers: { location: 'https://nna774.net/favicon.ico' }});
 };
 
 const ひみつのことResponse = (): Response => {
