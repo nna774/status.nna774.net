@@ -17,7 +17,7 @@ const favicon = (): Response => {
 };
 
 const ひみつのことResponse = (): Response => {
-  return new Response('今回の「ピ」について', { status: 401 });
+  return new Response('今回の「ピ」について\n', { status: 401 });
 };
 
 const handleRequest = (req: Request): Response => {
